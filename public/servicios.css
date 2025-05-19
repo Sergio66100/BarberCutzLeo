@@ -1,0 +1,146 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Servicios Section */
+#servicios {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#servicios h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.servicios-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.servicio-item {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.servicio-item:hover {
+    transform: translateY(-10px);
+}
+
+.servicio-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.servicio-item p {
+    font-size: 1.2em;
+}
+
+/* Productos Section */
+#productos {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#productos h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.productos-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.producto-item {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.producto-item:hover {
+    transform: translateY(-10px);
+}
+
+.producto-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.producto-item p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.producto-item img {
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-top: auto;
+}

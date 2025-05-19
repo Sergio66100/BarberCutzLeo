@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="proyecto.css">
+    <style>
+        .fade-in-text {
+            font-size: 24px;
+            font-weight: bold;
+            opacity: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: fadeIn 3s forwards, typing 3s steps(30) forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="citas.html">CITAS</a></li>
+                <li><a href="servicios.html">SERVICIOS Y PRODUCTOS</a></li>
+                <li><a href="estadisticas.html">ESTADÍSTICAS</a></li>
+                <li><a href="promociones.html">PROMOCIONES</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+                <li onclick="logout()">Cerrar Sesión</li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1><span class="highlight">CUTZ</span> NOW</h1>
+            <p class="fade-in-text">¡Bienvenido a la mejor experiencia de peluquería!</p>
+            <a href="citas.html" class="cta">RESERVA CITA</a>
+        </section>
+    </main>
+
+    <script>
+
+        function logout() {
+        localStorage.removeItem("token"); // Elimina el token
+         window.location.href = "login.html"; // Redirige al login
+        }
+
+    </script>
+
+</body>
+</html>

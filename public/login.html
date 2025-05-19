@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="" class="form">
+            <h1 class="title">Inicio</h1>
+            <div class="inp">
+                <input type="text" name="" id="user" class="input" placeholder="usuario">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="inp">
+                <input type="password" name="" id="pass" class="input" placeholder="contraseña">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <button onclick="loginusuario(event)" class="submit">Iniciar sesión</button>
+            <p class="footer">¿No tienes cuenta?  <a href="registro.html" class="link">Por favor, Registrate</a></p>   
+        </form>
+        <div></div>
+        <div class="banner">
+            <h1 class="wel_text">Bienvenid@</h1><br>
+            <p class="para"></p>
+        </div>
+    </div>
+
+<script>
+async function loginusuario(event) {
+    event.preventDefault(); // ¡Detiene la recarga!
+
+    const email = document.getElementById('user').value;
+    const password = document.getElementById('pass').value;
+
+    
+        const response = await fetch("http://127.0.0.1:9000/auth/login/user", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
+        });
+
+        if (!response.ok) {
+            throw new Error("Usuario o contraseña son incorrectos");
+        }
+
+        const data = await response.json();
+        const token = data.token;
+
+        localStorage.setItem("token", token);
+        console.log("✅ Login exitoso. Token:", token);
+
+        // Redirección
+        window.location.href = "citas.html";
+    }
+
+
+
+</script>
+
+</body>
+</html>

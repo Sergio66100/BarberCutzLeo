@@ -1,0 +1,151 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ecf0f1;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f39c12;
+}
+
+/* Promociones Section */
+#promociones {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#promociones h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.promo {
+    background-color: #ecf0f1;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.promo:hover {
+    transform: translateY(-10px);
+}
+
+.promo h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+.promo p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.promo ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.promo ul li {
+    margin-bottom: 10px;
+}
+
+.promo .cta {
+    font-size: 1.3em;
+    color: #f39c12;
+}
+
+.promo .cta a {
+    text-decoration: none;
+    color: #f39c12;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.promo .cta a:hover {
+    color: #e67e22;
+}
+
+/* Contacto Section */
+#contacto {
+    background-color: #34495e;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#contacto p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#contacto a {
+    color: #f39c12;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contacto a:hover {
+    color: #e67e22;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-top: auto;
+}

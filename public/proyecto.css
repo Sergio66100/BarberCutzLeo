@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('imagenes/fondo.png');
+    background-size: cover; 
+    background-position: center; 
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    margin-top: 50px;
+    font-size: 3em;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.cta {
+    background: transparent;
+    color: #f1c40f;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border: 2px solid #f1c40f;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 15px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cta:hover {
+    background: #f1c40f;
+    color: black;
+}
